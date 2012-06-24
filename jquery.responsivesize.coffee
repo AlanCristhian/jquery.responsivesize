@@ -50,11 +50,11 @@ You can customize the default DPI. ###
 		### aplica los cambios a los elementos seleccionados ###
 		@.each ->
 			$this = $(@)
-
-			if defaults.adaptFont
-				adaptFontSize($this)
-			if defaults.adaptImages
-				adaptImagesSize($this)
+			if $this
+				if defaults.adaptFont
+					adaptFontSize($this)
+				if defaults.adaptImages
+					adaptImagesSize($this)
 			return
 	return
 )(jQuery)

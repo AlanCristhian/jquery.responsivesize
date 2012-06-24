@@ -69,11 +69,13 @@ You can customize the default DPI. */
 			return this.each(function() {
 				var $this;
 				$this = $(this);
-				if (defaults.adaptFont) {
-					adaptFontSize($this);
-				}
-				if (defaults.adaptImages) {
-					adaptImagesSize($this);
+				if ($this) {
+					if (defaults.adaptFont) {
+						adaptFontSize($this);
+					}
+					if (defaults.adaptImages) {
+						adaptImagesSize($this);
+					}
 				}
 			});
 		};
